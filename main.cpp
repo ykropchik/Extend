@@ -58,8 +58,8 @@ public:
 
 class Teacher: public Human{
 private:
-    int salary;
-    int experience;
+    int salary;                 // Зарплата
+    int experience;             // Стаж работы
 public:
     Teacher(int age, SEX sex, int salary, int experience) : Human(age, sex) {
         this-> salary = salary;
@@ -85,7 +85,7 @@ public:
 
 class SeniorTeacher: public Teacher{
 private:
-    int subordination;
+    int subordination;                  // Кол-во подчиненных
 
 public:
     SeniorTeacher(int age, SEX sex, int salary, int experience, int subordination) : Teacher(age, sex, salary, experience) {
@@ -111,6 +111,7 @@ int main() {
     Postgraduate petya(26, Male, 23000, 3, "1523761258312");
     SeniorTeacher zhenya(45, Female, 31000, 10, 4);
 
+    std::cout << petya.Teacher::getAge() << " ";
     std::cout << petya.getSalary() << " ";
     std::cout << petya.getExperience() << "\n";
 
