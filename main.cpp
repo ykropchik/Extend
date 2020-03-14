@@ -5,28 +5,28 @@
 // 4. Продемонстрировать обращение к полям объектов дочерних и родительских классов
 // 5. Добавить несколько наследников от различных родителей (сделать дерево из 5 классов)
 
-enum SEX{
+enum SEX {
     Undefined,
     Male,
     Female
 };
 
-class Human{
+class Human {
     int age;
     SEX sex;
 
 public:
 
-    Human(int age, SEX sex){
+    Human(int age, SEX sex) {
         this->age = age;
         this->sex = sex;
     }
 
-    int getAge(){
+    int getAge() {
         return this->age;
     }
 
-    void setAge(int age){
+    void setAge(int age) {
         this->age = age;
     }
 
@@ -34,7 +34,7 @@ public:
         return sex;
     }
 
-    void setSex(SEX sex){
+    void setSex(SEX sex) {
         this->sex = sex;
     }
 };
@@ -56,7 +56,7 @@ public:
     }
 };
 
-class Teacher: public Human{
+class Teacher: public Human {
 private:
     int salary;                 // Зарплата
     int experience;             // Стаж работы
@@ -83,7 +83,7 @@ public:
     }
 };
 
-class SeniorTeacher: public Teacher{
+class SeniorTeacher: public Teacher {
 private:
     int subordination;                  // Кол-во подчиненных
 
@@ -101,7 +101,7 @@ public:
     }
 };
 
-class Postgraduate: public Teacher, Student{
+class Postgraduate: public Teacher, Student {
 public:
     Postgraduate(int age, SEX sex, int salary, int experience, const std::string &number) : Teacher(
             age, sex, salary, experience), Student(age, sex, number) {}
