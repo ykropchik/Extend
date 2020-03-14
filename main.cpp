@@ -30,7 +30,7 @@ public:
         this->age = age;
     }
 
-    SEX getSex(){
+    SEX getSex() {
         return sex;
     }
 
